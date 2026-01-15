@@ -37,4 +37,7 @@ print(outputs.shape,last_time_output.shape)
 
 #只有在单向单层RNN的特定条件下，
 # output[:, -1, :]才等于h_n（去掉 h_n 多余的第一个维度后），
+#即 output[:,-1,:]==h_n[0] 
 # 在其他情况下两者是不同的。
+#当num_layers!=1时 output是最后一层所有时间步的结果 h_t是所有层最后时间步的结果
+
